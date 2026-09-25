@@ -3,1231 +3,433 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Arsh Technologies - Digital marketing, Google Ads, Meta Ads, SEO, lead generation and website solutions.">
+<title>Arsh Technologies | Digital Growth Agency</title>
 
-<title>Arsh Technologies | Digital Marketing Agency</title>
-
-<meta name="description" content="Arsh Technologies provides digital marketing, Google Ads, Meta Ads, SEO, social media marketing and website development services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+:root{
+  --bg:#f7f8ff;
+  --card:#ffffff;
+  --text:#10111a;
+  --muted:#667085;
+  --primary:#5b4bff;
+  --primary2:#7b61ff;
+  --dark:#111225;
+  --line:#e8e9f2;
+  --shadow:0 20px 60px rgba(42,35,120,.10);
+  --radius:24px;
 }
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-    background:#f7f8fc;
-    color:#151515;
-    line-height:1.6;
+  font-family:Inter,Arial,sans-serif;color:var(--text);background:var(--bg);
+  line-height:1.6;overflow-x:hidden
 }
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.section{padding:100px 0}
+.tag{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;
+  background:#eeecff;color:#5142dc;font-weight:700;font-size:13px
+}
+.section-head{max-width:720px;margin-bottom:50px}
+.section-head h2{font:700 clamp(34px,4vw,54px)/1.08 "Space Grotesk",sans-serif;margin:16px 0}
+.section-head p{color:var(--muted);font-size:17px}
 
-/* HEADER */
-
+/* Header */
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#ffffff;
-    border-bottom:1px solid #eeeeee;
-    padding:18px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);
+  backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,233,242,.8)
 }
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:800 24px "Space Grotesk",sans-serif;letter-spacing:-1px}
+.logo span{color:var(--primary)}
+.navlinks{display:flex;gap:30px;align-items:center;font-weight:600;font-size:14px}
+.navlinks a{color:#30313c;transition:.2s}
+.navlinks a:hover{color:var(--primary)}
+.nav-cta{background:var(--dark);color:white!important;padding:12px 19px;border-radius:12px}
+.menu{display:none;border:0;background:none;font-size:27px}
 
-.logo{
-    font-size:25px;
-    font-weight:800;
-    letter-spacing:1px;
-}
-
-.logo span{
-    color:#5b4bff;
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:28px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#222;
-    font-weight:500;
-}
-
-nav a:hover{
-    color:#5b4bff;
-}
-
-.nav-btn{
-    background:#5b4bff;
-    color:white !important;
-    padding:11px 18px;
-    border-radius:7px;
-}
-
-/* HERO */
-
+/* Hero */
 .hero{
-    min-height:650px;
-    padding:80px 6%;
-    display:flex;
-    align-items:center;
-    background:
-    linear-gradient(120deg, #f7f8ff 0%, #ffffff 55%, #f1efff 100%);
+  position:relative;padding:78px 0 80px;overflow:hidden;
+  background:
+    radial-gradient(circle at 80% 25%,rgba(123,97,255,.22),transparent 30%),
+    radial-gradient(circle at 10% 10%,rgba(91,75,255,.10),transparent 28%),
+    linear-gradient(135deg,#fff 0%,#f8f7ff 100%)
 }
-
-.hero-content{
-    max-width:800px;
-}
-
-.badge{
-    display:inline-block;
-    background:#ebe9ff;
-    color:#5143dc;
-    padding:8px 15px;
-    border-radius:30px;
-    font-size:14px;
-    font-weight:bold;
-    margin-bottom:22px;
-}
-
-.hero h1{
-    font-size:64px;
-    line-height:1.08;
-    margin-bottom:22px;
-}
-
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+.hero h1{font:700 clamp(48px,6vw,78px)/.98 "Space Grotesk",sans-serif;letter-spacing:-3px;margin:22px 0}
 .hero h1 span{
-    color:#5b4bff;
+  background:linear-gradient(90deg,#5848ff,#8a68ff);
+  -webkit-background-clip:text;background-clip:text;color:transparent
 }
-
-.hero p{
-    color:#666;
-    font-size:20px;
-    max-width:680px;
-    margin-bottom:32px;
+.hero p{font-size:18px;color:var(--muted);max-width:650px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 22px;
+  border-radius:13px;font-weight:800;border:1px solid var(--line);transition:.25s
 }
+.btn-primary{background:var(--primary);color:white;border-color:var(--primary);box-shadow:0 12px 28px rgba(91,75,255,.25)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 35px rgba(91,75,255,.32)}
+.btn-light{background:white}
+.btn-light:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.mini-proof{display:flex;gap:25px;margin-top:35px;flex-wrap:wrap}
+.mini-proof strong{display:block;font-size:18px}
+.mini-proof span{font-size:13px;color:var(--muted)}
 
-.hero-buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
+.dashboard{
+  position:relative;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.9);
+  border-radius:28px;padding:18px;box-shadow:0 35px 90px rgba(42,35,120,.18);
+  transform:rotate(1deg)
 }
-
-.primary-btn{
-    display:inline-block;
-    text-decoration:none;
-    background:#5b4bff;
-    color:white;
-    padding:15px 25px;
-    border-radius:8px;
-    font-weight:bold;
+.dash-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
+.dots{display:flex;gap:6px}.dots i{width:8px;height:8px;border-radius:50%;background:#d7d9e7}
+.live{font-size:11px;font-weight:800;background:#e9fff2;color:#16854a;padding:6px 9px;border-radius:999px}
+.dash-main{background:#121326;color:white;border-radius:20px;padding:25px}
+.dash-label{color:#aeb1c9;font-size:12px}
+.dash-number{font:700 43px "Space Grotesk",sans-serif;margin:4px 0 15px}
+.chart{height:115px;display:flex;align-items:flex-end;gap:9px;margin:12px 0 22px}
+.bar{flex:1;border-radius:7px 7px 2px 2px;background:linear-gradient(180deg,#8a76ff,#5748ff);opacity:.9}
+.bar:nth-child(1){height:35%}.bar:nth-child(2){height:48%}.bar:nth-child(3){height:42%}.bar:nth-child(4){height:63%}.bar:nth-child(5){height:55%}.bar:nth-child(6){height:78%}.bar:nth-child(7){height:92%}
+.dash-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dcard{background:#fff;color:var(--text);padding:15px;border-radius:15px}
+.dcard small{color:var(--muted)}.dcard b{display:block;font-size:20px;margin-top:3px}
+.float-card{
+  position:absolute;background:#fff;padding:14px 17px;border-radius:16px;box-shadow:var(--shadow);
+  font-weight:800;font-size:13px
 }
+.fc1{left:-35px;bottom:35px}.fc2{right:-25px;top:45px}
 
-.secondary-btn{
-    display:inline-block;
-    text-decoration:none;
-    background:white;
-    color:#222;
-    padding:15px 25px;
-    border-radius:8px;
-    border:1px solid #ddd;
-    font-weight:bold;
-}
+/* Trust strip */
+.trust{padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.trust-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#73788a;font-weight:700;font-size:13px}
 
-.primary-btn:hover{
-    background:#4939e5;
-}
-
-/* STATS */
-
-.stats{
-    background:#11121a;
-    color:white;
-    padding:40px 6%;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-    text-align:center;
-}
-
-.stat h3{
-    font-size:30px;
-}
-
-.stat p{
-    color:#aaa;
-}
-
-/* COMMON */
-
-.section{
-    padding:85px 6%;
-}
-
-.section-heading{
-    text-align:center;
-    max-width:750px;
-    margin:0 auto 50px;
-}
-
-.section-heading span{
-    color:#5b4bff;
-    font-weight:bold;
-}
-
-.section-heading h2{
-    font-size:42px;
-    margin:10px 0;
-}
-
-.section-heading p{
-    color:#666;
-    font-size:17px;
-}
-
-/* SERVICES */
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .service{
-    background:white;
-    padding:30px;
-    border-radius:14px;
-    border:1px solid #eeeeee;
-    transition:.25s;
+  background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;
+  transition:.3s;box-shadow:0 5px 20px rgba(20,20,50,.03)
 }
-
-.service:hover{
-    transform:translateY(-7px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+.service:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:#d9d5ff}
+.icon{
+  width:52px;height:52px;display:grid;place-items:center;border-radius:15px;
+  background:#eeecff;font-size:25px;margin-bottom:20px
 }
+.service h3{font:700 22px "Space Grotesk",sans-serif;margin-bottom:8px}
+.service p{color:var(--muted);font-size:14px}
 
-.service-icon{
-    width:55px;
-    height:55px;
-    border-radius:12px;
-    background:#eeecff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:27px;
-    margin-bottom:20px;
+/* Dark section */
+.dark{background:var(--dark);color:white;position:relative;overflow:hidden}
+.dark:before{
+  content:"";position:absolute;width:500px;height:500px;border-radius:50%;
+  background:rgba(91,75,255,.20);filter:blur(80px);right:-180px;top:-200px
 }
-
-.service h3{
-    margin-bottom:10px;
-    font-size:21px;
+.dark .section-head p{color:#b6b9cc}
+.features{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.feature{
+  padding:25px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.05);
+  border-radius:20px
 }
+.feature b{font-size:18px}.feature p{color:#aeb1c2;margin-top:7px;font-size:14px}
 
-.service p{
-    color:#666;
+/* Case studies */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.case{
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;overflow:hidden
 }
-
-/* ABOUT */
-
-.about{
-    background:white;
+.case-visual{
+  height:160px;border-radius:18px;margin-bottom:22px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#1c1d35,#5b4bff)
 }
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.case-visual:after{
+  content:"";position:absolute;left:18px;right:18px;bottom:20px;height:65px;
+  background:repeating-linear-gradient(135deg,transparent 0 18px,rgba(255,255,255,.55) 19px 21px);
+  border-radius:10px;opacity:.7
 }
+.case h3{font:700 22px "Space Grotesk",sans-serif}.case p{color:var(--muted);font-size:14px;margin-top:7px}
+.case-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.case-tags span{font-size:11px;font-weight:700;background:#f0efff;color:#5545e5;padding:6px 9px;border-radius:999px}
 
-.about-image{
-    min-height:430px;
-    border-radius:18px;
-    background:
-    linear-gradient(rgba(35,25,120,.35),rgba(35,25,120,.35)),
-    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85");
-    background-size:cover;
-    background-position:center;
-}
-
-.about-content h2{
-    font-size:42px;
-    margin-bottom:18px;
-}
-
-.about-content p{
-    color:#666;
-    margin-bottom:18px;
-}
-
-.check{
-    margin:12px 0;
-    font-weight:500;
-}
-
-.check span{
-    color:#5b4bff;
-    margin-right:8px;
-}
-
-/* PROCESS */
-
-.process{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.process-card{
-    background:white;
-    padding:30px 20px;
-    border-radius:14px;
-    text-align:center;
-    border:1px solid #eee;
-}
-
-.process-number{
-    width:50px;
-    height:50px;
-    margin:0 auto 15px;
-    border-radius:50%;
-    background:#5b4bff;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:18px;
-}
+/* Process */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{position:relative;padding:28px 20px;background:#fff;border:1px solid var(--line);border-radius:20px}
+.step-no{font:700 34px "Space Grotesk",sans-serif;color:#d6d2ff}
+.step h3{font-size:18px;margin:7px 0}.step p{color:var(--muted);font-size:13px}
 
 /* CTA */
-
-.cta{
-    margin:0 6% 80px;
-    border-radius:20px;
-    padding:70px 30px;
-    text-align:center;
-    color:white;
-    background:
-    linear-gradient(120deg,#3025b8,#6a5cff);
+.cta-box{
+  border-radius:30px;padding:65px;position:relative;overflow:hidden;color:white;
+  background:linear-gradient(120deg,#17182d,#5949ff 75%,#806cff)
 }
+.cta-box:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:rgba(255,255,255,.12);right:-100px;top:-120px}
+.cta-box h2{font:700 clamp(34px,4vw,52px)/1.05 "Space Grotesk",sans-serif;max-width:720px}
+.cta-box p{color:#e1e0ff;max-width:650px;margin:15px 0 25px}
+.cta-box .btn{background:#fff;color:#15162a;border-color:#fff;position:relative;z-index:2}
 
-.cta h2{
-    font-size:42px;
-    margin-bottom:15px;
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:25px}
+.contact-card,.form-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px}
+.contact-item{display:flex;gap:15px;padding:18px 0;border-bottom:1px solid var(--line)}
+.contact-item:last-child{border-bottom:0}
+.contact-icon{width:44px;height:44px;border-radius:12px;background:#eeecff;display:grid;place-items:center}
+.contact-item b{display:block}.contact-item span{color:var(--muted);font-size:14px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+label{font-size:13px;font-weight:700;display:block;margin-bottom:7px}
+input,select,textarea{
+  width:100%;border:1px solid var(--line);border-radius:12px;padding:13px 14px;
+  font:inherit;outline:none;background:#fafaff
 }
+input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(91,75,255,.10)}
+.full{grid-column:1/-1}
+textarea{min-height:120px;resize:vertical}
+.form-btn{width:100%;margin-top:16px;border:0;cursor:pointer}
 
-.cta p{
-    color:#e7e6ff;
-    max-width:650px;
-    margin:0 auto 28px;
-}
+/* Footer */
+footer{background:#0d0e1b;color:white;padding:55px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer p{color:#9da1b5;font-size:14px;margin-top:12px;max-width:330px}
+footer h4{margin-bottom:12px}
+footer a{display:block;color:#aeb1c2;font-size:14px;margin:8px 0}
+footer a:hover{color:white}
+.copyright{border-top:1px solid rgba(255,255,255,.08);margin-top:35px;padding-top:20px;color:#818598;font-size:12px;display:flex;justify-content:space-between;gap:15px}
 
-.cta a{
-    display:inline-block;
-    background:white;
-    color:#3328b8;
-    text-decoration:none;
-    padding:14px 25px;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-/* CONTACT */
-
-.contact{
-    background:white;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-}
-
-.contact-info h2{
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.contact-info p{
-    color:#666;
-    margin-bottom:25px;
-}
-
-.contact-item{
-    margin:18px 0;
-}
-
-.contact-item strong{
-    display:block;
-    margin-bottom:3px;
-}
-
-.contact-item span{
-    color:#666;
-}
-
-.contact-form{
-    background:#f8f8fc;
-    padding:30px;
-    border-radius:15px;
-}
-
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-    border:1px solid #ddd;
-    border-radius:8px;
-    padding:14px;
-    margin-bottom:14px;
-    font-size:15px;
-    background:white;
-}
-
-.contact-form textarea{
-    min-height:130px;
-    resize:vertical;
-}
-
-.submit-btn{
-    width:100%;
-    border:0;
-    background:#5b4bff;
-    color:white;
-    padding:15px;
-    border-radius:8px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* FOOTER */
-
-footer{
-    background:#11121a;
-    color:white;
-    padding:45px 6%;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:40px;
-}
-
-.footer-logo{
-    font-size:25px;
-    font-weight:bold;
-}
-
-.footer-logo span{
-    color:#8175ff;
-}
-
-footer p{
-    color:#999;
-    margin-top:12px;
-}
-
-.footer-title{
-    font-weight:bold;
-    margin-bottom:12px;
-}
-
-footer a{
-    display:block;
-    color:#aaa;
-    text-decoration:none;
-    margin:8px 0;
-}
-
-footer a:hover{
-    color:white;
-}
-
-.copyright{
-    border-top:1px solid #292a32;
-    margin-top:35px;
-    padding-top:20px;
-    text-align:center;
-    color:#777;
-}
-
-/* WHATSAPP */
-
+/* WhatsApp */
 .whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:14px 20px;
-    border-radius:50px;
-    font-weight:bold;
-    z-index:1500;
-    box-shadow:0 5px 20px rgba(0,0,0,.2);
+  position:fixed;right:22px;bottom:22px;z-index:60;background:#20d66b;color:white;
+  padding:14px 20px;border-radius:999px;font-weight:800;box-shadow:0 15px 35px rgba(0,0,0,.18);
+  transition:.25s
 }
+.whatsapp:hover{transform:translateY(-4px)}
 
-/* MOBILE */
-
-@media(max-width:950px){
-
-    .hero h1{
-        font-size:50px;
-    }
-
-    .services{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .process{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
-
+@media(max-width:900px){
+  .navlinks{display:none}.menu{display:block}
+  .hero-grid,.contact-grid{grid-template-columns:1fr}
+  .hero{padding-top:55px}.dashboard{max-width:620px;margin:auto}
+  .services-grid,.cases{grid-template-columns:1fr 1fr}
+  .process{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
 }
-
-@media(max-width:700px){
-
-    header{
-        padding:15px 5%;
-    }
-
-    nav a{
-        display:none;
-    }
-
-    .nav-btn{
-        display:block !important;
-    }
-
-    .hero{
-        min-height:580px;
-        padding:60px 5%;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    .section{
-        padding:60px 5%;
-    }
-
-    .section-heading h2{
-        font-size:32px;
-    }
-
-    .services,
-    .about-grid,
-    .process,
-    .contact-grid,
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .cta{
-        margin:0 5% 60px;
-    }
-
-    .cta h2{
-        font-size:32px;
-    }
-
+@media(max-width:600px){
+  .section{padding:70px 0}
+  .hero h1{letter-spacing:-2px}
+  .services-grid,.cases,.features,.process,.form-grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  .float-card{display:none}
+  .cta-box{padding:38px 25px}
+  .footer-grid{grid-template-columns:1fr}
+  .copyright{flex-direction:column}
+  .whatsapp{right:15px;bottom:15px;padding:12px 17px}
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- HEADER -->
-
 <header>
-
-    <div class="logo">
-        ARSH <span>TECHNOLOGIES</span>
-    </div>
-
-    <nav>
-
-        <a href="#home">Home</a>
-
-        <a href="#services">Services</a>
-
-        <a href="#about">About</a>
-
-        <a href="#process">Process</a>
-
-        <a href="#contact">Contact</a>
-
-        <a class="nav-btn" href="#contact">
-            Get Started
-        </a>
-
+  <div class="container nav">
+    <a href="#home" class="logo">ARSH <span>TECHNOLOGIES</span></a>
+    <nav class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#work">Our Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact" class="nav-cta">Get Started</a>
     </nav>
-
+    <button class="menu" onclick="document.querySelector('.navlinks').style.display='flex'">☰</button>
+  </div>
 </header>
 
-
-<!-- HERO -->
-
+<main>
 <section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <div class="badge">
-            🚀 Digital Growth Partner
-        </div>
-
-        <h1>
-            Grow Your Business With
-            <span>Digital Marketing</span>
-        </h1>
-
-        <p>
-            Arsh Technologies helps businesses build a stronger
-            online presence through digital marketing, advertising,
-            SEO, social media and technology solutions.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#contact" class="primary-btn">
-                Get Free Consultation
-            </a>
-
-            <a href="#services" class="secondary-btn">
-                Explore Services
-            </a>
-
-        </div>
-
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">🚀 Digital Growth Partner</span>
+      <h1>Turn Attention Into <span>Real Business Growth.</span></h1>
+      <p>Arsh Technologies helps businesses grow online with performance marketing, Google Ads, Meta Ads, SEO, lead generation and conversion-focused websites.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#contact">Get Free Consultation →</a>
+        <a class="btn btn-light" href="#services">Explore Services</a>
+      </div>
+      <div class="mini-proof">
+        <div><strong>Google Ads</strong><span>Performance campaigns</span></div>
+        <div><strong>Meta Ads</strong><span>Lead & sales campaigns</span></div>
+        <div><strong>SEO</strong><span>Long-term visibility</span></div>
+      </div>
     </div>
 
+    <div class="dashboard">
+      <div class="dash-top"><div class="dots"><i></i><i></i><i></i></div><span class="live">● LIVE CAMPAIGN</span></div>
+      <div class="dash-main">
+        <span class="dash-label">MARKETING PERFORMANCE</span>
+        <div class="dash-number">Growth Dashboard</div>
+        <div class="chart"><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i></div>
+        <div class="dash-cards">
+          <div class="dcard"><small>Google Ads</small><b>Search</b></div>
+          <div class="dcard"><small>Meta Ads</small><b>Leads</b></div>
+        </div>
+      </div>
+      <div class="float-card fc1">📈 Data-driven strategy</div>
+      <div class="float-card fc2">⚡ Faster execution</div>
+    </div>
+  </div>
 </section>
 
-
-<!-- STATS -->
-
-<section class="stats">
-
-    <div class="stat">
-        <h3>360°</h3>
-        <p>Digital Solutions</p>
-    </div>
-
-    <div class="stat">
-        <h3>7+</h3>
-        <p>Core Services</p>
-    </div>
-
-    <div class="stat">
-        <h3>24/7</h3>
-        <p>Online Presence</p>
-    </div>
-
-    <div class="stat">
-        <h3>1</h3>
-        <p>Growth Partner</p>
-    </div>
-
-</section>
-
-
-<!-- SERVICES -->
+<div class="trust">
+  <div class="container trust-inner">
+    <span>GOOGLE ADS</span><span>META ADS</span><span>SEO</span><span>LEAD GENERATION</span><span>WEB DEVELOPMENT</span>
+  </div>
+</div>
 
 <section class="section" id="services">
-
-    <div class="section-heading">
-
-        <span>OUR SERVICES</span>
-
-        <h2>
-            Digital Solutions For Modern Businesses
-        </h2>
-
-        <p>
-            From advertising and SEO to websites and analytics,
-            we provide practical digital solutions under one roof.
-        </p>
-
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">What We Do</span>
+      <h2>Everything you need to grow online.</h2>
+      <p>From attracting the right audience to converting visitors into customers, we build the digital pieces around your business goals.</p>
     </div>
-
-
-    <div class="services">
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                📢
-            </div>
-
-            <h3>Google Ads</h3>
-
-            <p>
-                Search and display advertising strategies
-                designed around your business goals.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                📱
-            </div>
-
-            <h3>Meta Ads</h3>
-
-            <p>
-                Facebook and Instagram advertising campaigns
-                for reaching relevant audiences.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                🔎
-            </div>
-
-            <h3>SEO</h3>
-
-            <p>
-                Search engine optimization to improve
-                your website's organic visibility.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                📲
-            </div>
-
-            <h3>Social Media Marketing</h3>
-
-            <p>
-                Content and social media strategies that
-                help build your online presence.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                🌐
-            </div>
-
-            <h3>Website Development</h3>
-
-            <p>
-                Modern, responsive websites and landing
-                pages for businesses.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                🎯
-            </div>
-
-            <h3>Lead Generation</h3>
-
-            <p>
-                Campaign and landing-page systems focused
-                on generating relevant enquiries.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                📊
-            </div>
-
-            <h3>Analytics & Tracking</h3>
-
-            <p>
-                Measurement and conversion tracking to
-                understand campaign performance.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                ⚙️
-            </div>
-
-            <h3>Marketing Automation</h3>
-
-            <p>
-                Streamline repetitive marketing tasks
-                with practical automation solutions.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <div class="service-icon">
-                💡
-            </div>
-
-            <h3>Digital Strategy</h3>
-
-            <p>
-                A structured digital roadmap based on
-                your business objectives and audience.
-            </p>
-
-        </div>
-
-
+    <div class="services-grid">
+      <div class="service"><div class="icon">🎯</div><h3>Google Ads</h3><p>Search, display and performance campaigns focused on qualified traffic and conversions.</p></div>
+      <div class="service"><div class="icon">📱</div><h3>Meta Ads</h3><p>Facebook and Instagram campaigns designed for leads, enquiries and product sales.</p></div>
+      <div class="service"><div class="icon">🔎</div><h3>SEO</h3><p>Technical, on-page and content strategies to improve organic visibility.</p></div>
+      <div class="service"><div class="icon">🧲</div><h3>Lead Generation</h3><p>Landing pages, forms and campaigns that make it easier for prospects to contact you.</p></div>
+      <div class="service"><div class="icon">💻</div><h3>Website Development</h3><p>Fast, responsive business websites built to communicate value and drive action.</p></div>
+      <div class="service"><div class="icon">📊</div><h3>Analytics & Tracking</h3><p>Conversion tracking and reporting so marketing decisions are based on useful data.</p></div>
+      <div class="service"><div class="icon">⚙️</div><h3>Marketing Automation</h3><p>Connect forms, messaging and follow-ups to reduce manual work and missed leads.</p></div>
+      <div class="service"><div class="icon">📣</div><h3>Social Media</h3><p>Content and campaign support that helps your brand stay visible and consistent.</p></div>
+      <div class="service"><div class="icon">🧠</div><h3>Digital Strategy</h3><p>A practical roadmap connecting your offer, audience, channels and conversion journey.</p></div>
     </div>
-
+  </div>
 </section>
 
-
-<!-- ABOUT -->
-
-<section class="section about" id="about">
-
-    <div class="about-grid">
-
-        <div class="about-image"></div>
-
-
-        <div class="about-content">
-
-            <span style="color:#5b4bff;font-weight:bold;">
-                ABOUT ARSH TECHNOLOGIES
-            </span>
-
-            <h2>
-                Your Digital Growth Partner
-            </h2>
-
-            <p>
-                Arsh Technologies is a digital marketing and
-                technology-focused agency helping businesses
-                establish and grow their online presence.
-            </p>
-
-            <p>
-                We combine advertising, creative strategy,
-                websites, SEO and analytics to create a more
-                connected digital marketing experience.
-            </p>
-
-            <div class="check">
-                <span>✓</span>
-                Strategy-focused marketing
-            </div>
-
-            <div class="check">
-                <span>✓</span>
-                Responsive website solutions
-            </div>
-
-            <div class="check">
-                <span>✓</span>
-                Data and conversion tracking
-            </div>
-
-            <div class="check">
-                <span>✓</span>
-                Transparent communication
-            </div>
-
-        </div>
-
+<section class="section dark" id="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Why Arsh Technologies</span>
+      <h2>Marketing built around your business goals.</h2>
+      <p>We focus on clear strategy, measurable actions and continuous improvement instead of random marketing activity.</p>
     </div>
-
+    <div class="features">
+      <div class="feature"><b>🎯 Goal-focused campaigns</b><p>Campaign structure starts with the business objective and the customer journey.</p></div>
+      <div class="feature"><b>📊 Tracking-first approach</b><p>Set up useful conversion signals before making decisions from campaign data.</p></div>
+      <div class="feature"><b>⚡ Fast execution</b><p>Launch, test and improve campaigns without unnecessary complexity.</p></div>
+      <div class="feature"><b>🤝 Transparent communication</b><p>Simple reporting and clear next steps so you know what is happening.</p></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- PROCESS -->
+<section class="section" id="work">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Our Work</span>
+      <h2>Digital solutions for different growth stages.</h2>
+      <p>Choose the combination of services that matches your current business challenge.</p>
+    </div>
+    <div class="cases">
+      <div class="case"><div class="case-visual"></div><h3>Lead Generation System</h3><p>Landing page + paid traffic + tracking + follow-up flow.</p><div class="case-tags"><span>Meta Ads</span><span>Landing Page</span><span>Tracking</span></div></div>
+      <div class="case"><div class="case-visual"></div><h3>Search Growth System</h3><p>Search campaigns and SEO designed around high-intent customer queries.</p><div class="case-tags"><span>Google Ads</span><span>SEO</span><span>Analytics</span></div></div>
+      <div class="case"><div class="case-visual"></div><h3>Business Website</h3><p>Professional website structure designed to turn visits into enquiries.</p><div class="case-tags"><span>Web Design</span><span>Conversion</span><span>Mobile</span></div></div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="process">
-
-    <div class="section-heading">
-
-        <span>OUR PROCESS</span>
-
-        <h2>
-            Simple. Clear. Structured.
-        </h2>
-
-        <p>
-            A straightforward approach to building your
-            digital marketing presence.
-        </p>
-
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Our Process</span>
+      <h2>A simple path from idea to growth.</h2>
     </div>
-
-
     <div class="process">
-
-        <div class="process-card">
-
-            <div class="process-number">
-                01
-            </div>
-
-            <h3>Discover</h3>
-
-            <p>
-                Understand your business, audience and goals.
-            </p>
-
-        </div>
-
-
-        <div class="process-card">
-
-            <div class="process-number">
-                02
-            </div>
-
-            <h3>Plan</h3>
-
-            <p>
-                Create a digital strategy based on your objectives.
-            </p>
-
-        </div>
-
-
-        <div class="process-card">
-
-            <div class="process-number">
-                03
-            </div>
-
-            <h3>Execute</h3>
-
-            <p>
-                Launch campaigns, content, websites and tracking.
-            </p>
-
-        </div>
-
-
-        <div class="process-card">
-
-            <div class="process-number">
-                04
-            </div>
-
-            <h3>Optimize</h3>
-
-            <p>
-                Review data and continuously improve the approach.
-            </p>
-
-        </div>
-
+      <div class="step"><div class="step-no">01</div><h3>Discover</h3><p>Understand your business, audience, offer and goals.</p></div>
+      <div class="step"><div class="step-no">02</div><h3>Plan</h3><p>Choose channels, messaging, tracking and campaign structure.</p></div>
+      <div class="step"><div class="step-no">03</div><h3>Launch</h3><p>Build the campaigns, pages and tracking needed to go live.</p></div>
+      <div class="step"><div class="step-no">04</div><h3>Optimize</h3><p>Review data, test improvements and scale what works.</p></div>
     </div>
-
+  </div>
 </section>
 
-
-<!-- CTA -->
-
-<section class="cta">
-
-    <h2>
-        Ready To Grow Your Business?
-    </h2>
-
-    <p>
-        Let's discuss your business goals and explore
-        the right digital strategy for your brand.
-    </p>
-
-    <a href="#contact">
-        Start A Conversation
-    </a>
-
+<section class="section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Ready to build your next growth channel?</h2>
+      <p>Tell us about your business and what you want to achieve. We'll help you identify the right digital marketing starting point.</p>
+      <a href="#contact" class="btn">Start a Conversation →</a>
+    </div>
+  </div>
 </section>
 
-
-<!-- CONTACT -->
-
-<section class="section contact" id="contact">
-
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Contact Us</span>
+      <h2>Let's talk about your business.</h2>
+      <p>Fill in the form and we'll open WhatsApp with your enquiry details.</p>
+    </div>
     <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-item"><div class="contact-icon">💬</div><div><b>WhatsApp</b><span>Quick business enquiries</span></div></div>
+        <div class="contact-item"><div class="contact-icon">✉️</div><div><b>Email</b><span>hello@arshtechnologies.com</span></div></div>
+        <div class="contact-item"><div class="contact-icon">📍</div><div><b>Location</b><span>India</span></div></div>
+        <div class="contact-item"><div class="contact-icon">🕐</div><div><b>Availability</b><span>Business enquiries welcome</span></div></div>
+      </div>
 
-
-        <div class="contact-info">
-
-            <span style="color:#5b4bff;font-weight:bold;">
-                GET IN TOUCH
-            </span>
-
-            <h2>
-                Let's Talk About Your Business
-            </h2>
-
-            <p>
-                Have a project, marketing requirement or
-                business idea? Send us your details and
-                we'll get in touch.
-            </p>
-
-
-            <div class="contact-item">
-
-                <strong>🏢 Company</strong>
-
-                <span>
-                    Arsh Technologies
-                </span>
-
-            </div>
-
-
-            <div class="contact-item">
-
-                <strong>📧 Email</strong>
-
-                <span>
-                    hello@arshtechnologies.com
-                </span>
-
-            </div>
-
-
-            <div class="contact-item">
-
-                <strong>📱 Phone</strong>
-
-                <span>
-                    +91 XXXXX XXXXX
-                </span>
-
-            </div>
-
-
-            <div class="contact-item">
-
-                <strong>📍 Location</strong>
-
-                <span>
-                    India
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="contact-form">
-
-            <input
-                type="text"
-                id="name"
-                placeholder="Your Name"
-            >
-
-            <input
-                type="tel"
-                id="phone"
-                placeholder="Mobile Number"
-            >
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Email Address"
-            >
-
-            <textarea
-                id="message"
-                placeholder="Tell us about your requirement..."
-            ></textarea>
-
-            <button
-                class="submit-btn"
-                onclick="sendEnquiry()"
-            >
-                Send Enquiry
-            </button>
-
-        </div>
-
+      <div class="form-card">
+        <form onsubmit="sendWhatsApp(event)">
+          <div class="form-grid">
+            <div><label>Your Name</label><input id="name" required placeholder="Enter your name"></div>
+            <div><label>Phone</label><input id="phone" required placeholder="Enter phone number"></div>
+            <div><label>Business</label><input id="business" placeholder="Business / company name"></div>
+            <div><label>Service</label><select id="service"><option>Google Ads</option><option>Meta Ads</option><option>SEO</option><option>Lead Generation</option><option>Website Development</option><option>Other</option></select></div>
+            <div class="full"><label>Message</label><textarea id="message" placeholder="Tell us briefly about your requirement"></textarea></div>
+          </div>
+          <button class="btn btn-primary form-btn" type="submit">Send Enquiry on WhatsApp →</button>
+        </form>
+      </div>
     </div>
-
+  </div>
 </section>
-
-
-<!-- FOOTER -->
+</main>
 
 <footer>
-
+  <div class="container">
     <div class="footer-grid">
-
-        <div>
-
-            <div class="footer-logo">
-                ARSH <span>TECHNOLOGIES</span>
-            </div>
-
-            <p>
-                Digital marketing and technology solutions
-                for modern businesses.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <div class="footer-title">
-                Services
-            </div>
-
-            <a href="#services">Google Ads</a>
-
-            <a href="#services">Meta Ads</a>
-
-            <a href="#services">SEO</a>
-
-            <a href="#services">Website Development</a>
-
-        </div>
-
-
-        <div>
-
-            <div class="footer-title">
-                Company
-            </div>
-
-            <a href="#about">About</a>
-
-            <a href="#process">Our Process</a>
-
-            <a href="#contact">Contact</a>
-
-        </div>
-
+      <div><div class="logo">ARSH <span>TECHNOLOGIES</span></div><p>Digital marketing, advertising, websites and growth solutions for modern businesses.</p></div>
+      <div><h4>Services</h4><a href="#services">Google Ads</a><a href="#services">Meta Ads</a><a href="#services">SEO</a><a href="#services">Lead Generation</a></div>
+      <div><h4>Company</h4><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+      <div><h4>Start a Project</h4><a href="#contact">Get Consultation</a><a href="#contact">Send Enquiry</a><a href="#home">Back to top ↑</a></div>
     </div>
-
-
-    <div class="copyright">
-
-        © 2026 Arsh Technologies. All Rights Reserved.
-
-    </div>
-
+    <div class="copyright"><span>© 2026 Arsh Technologies. All rights reserved.</span><span>Digital Growth • Performance • Technology</span></div>
+  </div>
 </footer>
 
-
-<!-- WHATSAPP -->
-
-<a
-    class="whatsapp"
-    href="https://wa.me/919999999999"
-    target="_blank"
->
-    💬 WhatsApp
-</a>
-
+<a class="whatsapp" href="https://wa.me/919999999999" target="_blank" rel="noopener">💬 WhatsApp</a>
 
 <script>
+function sendWhatsApp(e){
+  e.preventDefault();
+  const number = "919999999999"; // Replace later with your real WhatsApp number
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const business = document.getElementById("business").value;
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value;
 
-function sendEnquiry(){
+  const text =
+`Hello Arsh Technologies!
 
-    const name =
-        document.getElementById("name").value.trim();
+Name: ${name}
+Phone: ${phone}
+Business: ${business}
+Service: ${service}
+Requirement: ${message}`;
 
-    const phone =
-        document.getElementById("phone").value.trim();
-
-    const email =
-        document.getElementById("email").value.trim();
-
-    const message =
-        document.getElementById("message").value.trim();
-
-
-    if(!name || !phone){
-
-        alert("Please enter your name and mobile number.");
-
-        return;
-
-    }
-
-
-    let text =
-        "Hello Arsh Technologies,%0A%0A" +
-
-        "NEW ENQUIRY%0A%0A" +
-
-        "Name: " + name + "%0A" +
-
-        "Phone: " + phone + "%0A" +
-
-        "Email: " + email + "%0A%0A" +
-
-        "Requirement:%0A" + message;
-
-
-    window.open(
-        "https://wa.me/919999999999?text=" + text,
-        "_blank"
-    );
-
+  window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(text), "_blank");
 }
-
 </script>
-
 
 </body>
 </html>
